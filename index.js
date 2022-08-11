@@ -27,8 +27,8 @@ function doItNow(req, res) {
   // Takes in unformatted date and formats and returns it
   function generateFormattedDate(rawDate) {
     let dateArray = rawDate.toString().split(" ")
-
-    return res.json({ unix: Math.floor(rawDate.getTime() / 1000), utc: `${dateArray[0]}, ${dateArray[2]} ${dateArray[1]} ${dateArray[3]} 00:00:00 GMT` })
+    console.log(dateArray)
+    return res.json({ unix: Math.floor(rawDate.getTime()), utc: `${dateArray[0]}, ${dateArray[2]} ${dateArray[1]} ${dateArray[3]} 00:00:00 GMT` })
   }
 
   if (!date) {
