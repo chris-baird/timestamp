@@ -28,7 +28,7 @@ function doItNow(req, res) {
   function generateFormattedDate(rawDate) {
     let dateArray = rawDate.toString().split(" ")
     console.log(dateArray)
-    return res.json({ unix: Math.floor(rawDate.getTime()), utc: `${dateArray[0]}, ${dateArray[2]} ${dateArray[1]} ${dateArray[3]} 00:00:00 GMT` })
+    return res.json({ unix: Math.floor(rawDate.getTime()), utc: `${dateArray[0]}, ${dateArray[2]} ${dateArray[1]} ${dateArray[3]} ${dateArray[4]} GMT` })
   }
 
   if (!date) {
